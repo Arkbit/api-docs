@@ -11,7 +11,7 @@ REST，即Representational State Transfer的缩写，是目前最流行的一种
     
 ## 请求交互    
 
-REST访问的根URL：`https://www.okex.com/api/v1` 
+REST访问的根URL：`https://www.arkbit.io/api/v1` 
 
 访问时需要科学上网
 
@@ -27,17 +27,17 @@ REST访问的根URL：`https://www.okex.com/api/v1`
 
 ### 合约行情 API 
 
-获取OKEx合约行情数据  
+获取ArkBit合约行情数据  
 
-1. Get /api/v1/future_ticker    获取OKEx合约行情
+1. Get /api/v1/future_ticker    获取ArkBit合约行情
 
-URL `https://www.okex.com/api/v1/future_ticker.do`	
+URL `https://www.arkbit.io/api/v1/future_ticker.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_ticker.do?symbol=btc_usd&contract_type=this_week
+GET https://www.arkbit.io/api/v1/future_ticker.do?symbol=btc_usd&contract_type=this_week
 # Response
 {
 	"date":"1411627632",
@@ -74,15 +74,15 @@ vol:成交量(最近的24小时)
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 
-2. Get /api/v1/future_depth   获取OKEx合约深度信息
+2. Get /api/v1/future_depth   获取ArkBit合约深度信息
 
-URL `https://www.okex.com/api/v1/future_depth.do`	
+URL `https://www.arkbit.io/api/v1/future_depth.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_depth.do?symbol=btc_usd&contract_type=this_week
+GET https://www.arkbit.io/api/v1/future_depth.do?symbol=btc_usd&contract_type=this_week
 # Response
 {
 	"asks":[
@@ -118,15 +118,15 @@ bids :买方深度
 |size|Integer|是|value：1-200|
 |merge|Integer|否(默认0)|value：1(合并深度)|
 
-3. Get /api/v1/future_trades   获取OKEx合约交易记录信息
+3. Get /api/v1/future_trades   获取ArkBit合约交易记录信息
 
-URL `https://www.okex.com/api/v1/future_trades.do`	
+URL `https://www.arkbit.io/api/v1/future_trades.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_trades.do?symbol=btc_usd&contract_type=this_week
+GET https://www.arkbit.io/api/v1/future_trades.do?symbol=btc_usd&contract_type=this_week
 # Response
 [
 	{
@@ -168,15 +168,15 @@ type：交易类型
 
 
 
- 4. Get /api/v1/future_index   获取OKEx合约指数信息
+ 4. Get /api/v1/future_index   获取ArkBit合约指数信息
 
-URL `https://www.okex.com/api/v1/future_index.do`	
+URL `https://www.arkbit.io/api/v1/future_index.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_index.do?symbol=btc_usd
+GET https://www.arkbit.io/api/v1/future_index.do?symbol=btc_usd
 # Response
 {"future_index":471.0817}
 ```
@@ -195,13 +195,13 @@ future_index :指数
 
 5. Get /api/v1/exchange_rate   获取美元人民币汇率
 
-URL `https://www.okex.com/api/v1/exchange_rate.do`	
+URL `https://www.arkbit.io/api/v1/exchange_rate.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/exchange_rate.do
+GET https://www.arkbit.io/api/v1/exchange_rate.do
 # Response
 { "rate":6.1329 }
 ```
@@ -219,13 +219,13 @@ rate：美元-人民币汇率
 
 6. Get /api/v1/future_estimated_price   获取交割预估价
 
-URL `https://www.okex.com/api/v1/future_estimated_price.do`	
+URL `https://www.arkbit.io/api/v1/future_estimated_price.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_estimated_price.do?symbol=btc_usd
+GET https://www.arkbit.io/api/v1/future_estimated_price.do?symbol=btc_usd
 # Response
 {"forecast_price":5.4}
 ```
@@ -242,15 +242,15 @@ forecast_price:交割预估价  注意：交割预估价只有交割前三小时
 | :-----    | :-----   | :-----    | :-----   |
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 
-7. Get /api/v1/future_kline   获取OKEx合约K线信息
+7. Get /api/v1/future_kline   获取ArkBit合约K线信息
 
-URL `https://www.okex.com/api/v1/future_kline.do`	
+URL `https://www.arkbit.io/api/v1/future_kline.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_kline.do
+GET https://www.arkbit.io/api/v1/future_kline.do
 # Response
 [
     [
@@ -300,13 +300,13 @@ GET https://www.okex.com/api/v1/future_kline.do
 
 8. Get /api/v1/future_hold_amount   获取当前可用合约总持仓量
 
-URL `https://www.okex.com/api/v1/future_hold_amount.do`	
+URL `https://www.arkbit.io/api/v1/future_hold_amount.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=this_week
+GET https://www.arkbit.io/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=this_week
 # Response
 [
     {
@@ -332,13 +332,13 @@ contract_name:合约名
 
 9. Get /api/v1/future_price_limit   获取合约最高限价和最低限价
 
-URL `https://www.okex.com/api/v1/future_price_limit.do`	
+URL `https://www.arkbit.io/api/v1/future_price_limit.do`	
 
 示例	
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_price_limit.do?symbol=btc_usd&contract_type=this_week
+GET https://www.arkbit.io/api/v1/future_price_limit.do?symbol=btc_usd&contract_type=this_week
 # Response
 {"high":443.07,"low":417.09}
 ```
@@ -359,17 +359,17 @@ low :最低卖价
 
 ### 合约交易 API 
 
-用于OKEX快速进行合约交易
+用于ArkBit快速进行合约交易
 
-1. POST /api/v1/future_userinfo   获取OKEx合约账户信息(全仓)
+1. POST /api/v1/future_userinfo   获取ArkBit合约账户信息(全仓)
 
-URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率 10次/2秒  
+URL `https://www.arkbit.io/api/v1/future_userinfo.do`  访问频率 10次/2秒  
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_userinfo.do
+POST https://www.arkbit.io/api/v1/future_userinfo.do
 # Response
 {
     "info": {
@@ -410,15 +410,15 @@ risk_rate：保证金率
 |api_key|String|是|用户申请的apiKey|
 |sign|String|是|请求参数的签名|
 
-2. POST /api/v1/future_position   获取用户持仓获取OKEX合约账户信息 （全仓）
+2. POST /api/v1/future_position   获取用户持仓获取ArkBit合约账户信息 （全仓）
 
-URL `https://www.okex.com/api/v1/future_position.do`  访问频率 10次/2秒 
+URL `https://www.arkbit.io/api/v1/future_position.do`  访问频率 10次/2秒 
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_position.do
+POST https://www.arkbit.io/api/v1/future_position.do
 # Response
 {
 	"force_liqu_price": "0.07",
@@ -477,13 +477,13 @@ force_liqu_price:预估爆仓价
 
 3. POST /api/v1/future_trade   合约下单
 
-URL `https://www.okex.com/api/v1/future_trade.do`  访问频率 5次/1秒(按币种单独计算) 	
+URL `https://www.arkbit.io/api/v1/future_trade.do`  访问频率 5次/1秒(按币种单独计算) 	
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_trade.do
+POST https://www.arkbit.io/api/v1/future_trade.do
 # Response
 {
 	"order_id":986,
@@ -512,15 +512,15 @@ result ： true代表成功返回
 |match_price|String|否|是否为对手价 0:不是    1:是   ,当取值为1时,price无效|
 |lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
 
-4. POST /api/v1/future_trades_history    获取OKEX合约交易历史（非个人）访问频率 
+4. POST /api/v1/future_trades_history    获取ArkBit合约交易历史（非个人）访问频率 
 
-URL `https://www.okex.com/api/v1/future_trades_history`   访问频率 2次/2秒 
+URL `https://www.arkbit.io/api/v1/future_trades_history`   访问频率 2次/2秒 
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_trades_history.do
+POST https://www.arkbit.io/api/v1/future_trades_history.do
 # Response
 [
     {
@@ -562,13 +562,13 @@ type：交易类型（buy/sell）
 
 5. POST /api/v1/future\_batch_trade   批量下单
 
-URL `https://www.okex.com/api/v1/future_batch_trade.do`  访问频率 3次/1秒 最多一次下1-5个订单（按币种单独计算）	
+URL `https://www.arkbit.io/api/v1/future_batch_trade.do`  访问频率 3次/1秒 最多一次下1-5个订单（按币种单独计算）	
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_batch_trade.do
+POST https://www.arkbit.io/api/v1/future_batch_trade.do
 # Response
 {
 	"order_info":[
@@ -605,13 +605,13 @@ order_id:订单ID
 
 6. POST /api/v1/future_cancel   取消合约订单
 
-URL `https://www.okex.com/api/v1/future_cancel.do`  访问频率 2次/1秒，最多一次撤1-5个订单（按币种单独计算） 	
+URL `https://www.arkbit.io/api/v1/future_cancel.do`  访问频率 2次/1秒，最多一次撤1-5个订单（按币种单独计算） 	
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_cancel.do
+POST https://www.arkbit.io/api/v1/future_cancel.do
 # Response
 #多笔订单返回结果(成功订单ID,失败订单ID)
 {
@@ -646,13 +646,13 @@ error:失败的订单ID后跟失败错误码(用户多笔订单)
 
 7. POST /api/v1/future\_order\_info   获取合约订单信息
 
-URL `https://www.okex.com/api/v1/future_order_info.do`  	
+URL `https://www.arkbit.io/api/v1/future_order_info.do`  	
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_order_info.do
+POST https://www.arkbit.io/api/v1/future_order_info.do
 # Response
 {
   "orders":
@@ -710,14 +710,14 @@ lever_rate: 杠杆倍数  value:10\20  默认10
 
 8. POST /api/v1/future\_orders\_info   批量获取合约订单信息
 
-URL `https://www.okex.com/api/v1/future_orders_info.do`  
+URL `https://www.arkbit.io/api/v1/future_orders_info.do`  
 
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_orders_info.do
+POST https://www.arkbit.io/api/v1/future_orders_info.do
 # Response
 {
     "orders": [
@@ -801,13 +801,13 @@ lever_rate: 杠杆倍数  value:10\20  默认10
 
 9. POST /api/v1/future\_userinfo\_4fix   获取逐仓合约账户信息
 
-URL `https://www.okex.com/api/v1/future_userinfo_4fix.do`  
+URL `https://www.arkbit.io/api/v1/future_userinfo_4fix.do`  
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_userinfo_4fix.do
+POST https://www.arkbit.io/api/v1/future_userinfo_4fix.do
 # Response
 {
 	"info": {
@@ -868,13 +868,13 @@ rights:账户权益
 
 10. POST /api/v1/future\_position\_4fix   逐仓用户持仓查询
 
-URL `https://www.okex.com/api/v1/future_position_4fix.do`  访问频率 10次/2秒 
+URL `https://www.arkbit.io/api/v1/future_position_4fix.do`  访问频率 10次/2秒 
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_position_4fix.do
+POST https://www.arkbit.io/api/v1/future_position_4fix.do
 # Response
 {
 	"holding": [{
@@ -942,13 +942,13 @@ lever_rate: 杠杆倍数
 
 11. POST /api/v1/future_explosive   获取合约爆仓单
 
-URL `https://www.okex.com/api/v1/future_explosive.do` 
+URL `https://www.arkbit.io/api/v1/future_explosive.do` 
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_explosive.do
+POST https://www.arkbit.io/api/v1/future_explosive.do
 # Response
 [
     {
@@ -1018,13 +1018,13 @@ type：交易类型 1：买入开多 2：卖出开空 3：卖出平多 4：买�
 
 12. POST /api/v1/future_devolve   个人账户资金划转
 
-URL `https://www.okex.com/api/v1/future_devolve.do`  	
+URL `https://www.arkbit.io/api/v1/future_devolve.do`  	
 
 示例	
 
 ```
 # Request
-POST https://www.okex.com/api/v1/future_devolve.do
+POST https://www.arkbit.io/api/v1/future_devolve.do
 # Response
 {
     "result":true
