@@ -27,9 +27,9 @@ REST访问的根URL：`https://www.arkbit.io/api/v1`
 
 ### 合约行情 API 
 
-获取ArkBit合约行情数据  
+获取Arkbit合约行情数据  
 
-1. Get /api/v1/future_ticker    获取ArkBit合约行情
+1. Get /api/v1/future_ticker    获取Arkbit合约行情
 
 URL `https://www.arkbit.io/api/v1/future_ticker.do`	
 
@@ -74,7 +74,7 @@ vol:成交量(最近的24小时)
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 
-2. Get /api/v1/future_depth   获取ArkBit合约深度信息
+2. Get /api/v1/future_depth   获取Arkbit合约深度信息
 
 URL `https://www.arkbit.io/api/v1/future_depth.do`	
 
@@ -118,7 +118,7 @@ bids :买方深度
 |size|Integer|是|value：1-200|
 |merge|Integer|否(默认0)|value：1(合并深度)|
 
-3. Get /api/v1/future_trades   获取ArkBit合约交易记录信息
+3. Get /api/v1/future_trades   获取Arkbit合约交易记录信息
 
 URL `https://www.arkbit.io/api/v1/future_trades.do`	
 
@@ -168,7 +168,7 @@ type：交易类型
 
 
 
- 4. Get /api/v1/future_index   获取ArkBit合约指数信息
+ 4. Get /api/v1/future_index   获取Arkbit合约指数信息
 
 URL `https://www.arkbit.io/api/v1/future_index.do`	
 
@@ -242,7 +242,7 @@ forecast_price:交割预估价  注意：交割预估价只有交割前三小时
 | :-----    | :-----   | :-----    | :-----   |
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 
-7. Get /api/v1/future_kline   获取ArkBit合约K线信息
+7. Get /api/v1/future_kline   获取Arkbit合约K线信息
 
 URL `https://www.arkbit.io/api/v1/future_kline.do`	
 
@@ -359,9 +359,9 @@ low :最低卖价
 
 ### 合约交易 API 
 
-用于ArkBit快速进行合约交易
+用于Arkbit快速进行合约交易
 
-1. POST /api/v1/future_userinfo   获取ArkBit合约账户信息(全仓)
+1. POST /api/v1/future_userinfo   获取Arkbit合约账户信息(全仓)
 
 URL `https://www.arkbit.io/api/v1/future_userinfo.do`  访问频率 10次/2秒  
 
@@ -410,7 +410,7 @@ risk_rate：保证金率
 |api_key|String|是|用户申请的apiKey|
 |sign|String|是|请求参数的签名|
 
-2. POST /api/v1/future_position   获取用户持仓获取ArkBit合约账户信息 （全仓）
+2. POST /api/v1/future_position   获取用户持仓获取Arkbit合约账户信息 （全仓）
 
 URL `https://www.arkbit.io/api/v1/future_position.do`  访问频率 10次/2秒 
 
@@ -512,7 +512,7 @@ result ： true代表成功返回
 |match_price|String|否|是否为对手价 0:不是    1:是   ,当取值为1时,price无效|
 |lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
 
-4. POST /api/v1/future_trades_history    获取ArkBit合约交易历史（非个人）访问频率 
+4. POST /api/v1/future_trades_history    获取Arkbit合约交易历史（非个人）访问频率 
 
 URL `https://www.arkbit.io/api/v1/future_trades_history`   访问频率 2次/2秒 
 
